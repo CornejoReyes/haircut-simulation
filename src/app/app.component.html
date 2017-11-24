@@ -1,20 +1,161 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid main" style="margin-top:10px">
+	<h3>Problema de peluquería</h3>
+	<div class="row">
+		<div class="col-md-6">
+			<p>
+				La señora Estela de la Rosa es la administradora de una sala de belleza. Tiene en su establecimiento cuatro sillones para la atención de sus clientes, pero en la actualidad sólo tiene contratadas dos estilistas. Ella está considerando la contratación
+				de una estilista más. La señora Estela ha recopilado los datos que se muestran a continuación con respecto a la llegada de los clientes, así como la distribución de tiempo de servicio de corte de pelo:
+			</p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-md-6">
+					<div class="example-container mat-elevation-z8">
+						<mat-table #table1 [dataSource]="table1data">
 
+							<ng-container matColumnDef="minutes">
+								<mat-header-cell *matHeaderCellDef>Minutos</mat-header-cell>
+								<mat-cell *matCellDef="let item"> {{item.minutes}} </mat-cell>
+							</ng-container>
+
+							<ng-container matColumnDef="freq">
+								<mat-header-cell *matHeaderCellDef>Frecuencia observada</mat-header-cell>
+								<mat-cell *matCellDef="let item"> {{item.freq}} </mat-cell>
+							</ng-container>
+
+							<mat-header-row *matHeaderRowDef="displayedColumnst1"></mat-header-row>
+							<mat-row *matRowDef="let row; columns: displayedColumnst1;"></mat-row>
+
+						</mat-table>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="example-container mat-elevation-z8 table">
+						<mat-table #table2 [dataSource]="table2data">
+
+							<ng-container matColumnDef="minutes">
+								<mat-header-cell *matHeaderCellDef>Minutos</mat-header-cell>
+								<mat-cell *matCellDef="let item"> {{item.minutes}} </mat-cell>
+							</ng-container>
+
+							<ng-container matColumnDef="freq">
+								<mat-header-cell *matHeaderCellDef>Frecuencia relativa</mat-header-cell>
+								<mat-cell *matCellDef="let item"> {{item.freq}} </mat-cell>
+							</ng-container>
+
+							<mat-header-row *matHeaderRowDef="displayedColumnst2"></mat-header-row>
+							<mat-row *matRowDef="let row; columns: displayedColumnst2;"></mat-row>
+
+						</mat-table>
+					</div>
+				</div>
+			</div>
+			<p>
+				Se ha observado que, si se encuentran dos clientes en el local esperando por el servicio, ningún cliente nuevo se une a la línea de espera. Contratar un peluquero adicional costaría 80 centavos por hora más $1 por comisión por cada corte. En la actualidad,
+				el precio de un corte es de $5. Haga un modelo de sistemas para explicar la operación de la estética. Simule 240 horas de operación para determinar si se debe contratar a la estilista adicional.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6">
+					<mat-form-field>
+						<input matInput placeholder="Maximos clientes en cola" [(ngModel)]="maxQueueLength" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput placeholder="Maximos trabajadores" [(ngModel)]="numberOfWorkers" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput placeholder="Costo por hora de trabajador" [(ngModel)]="costPerWorkerPerHour" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+				</div>
+				<div class="col-md-6">
+					<mat-form-field>
+						<input matInput placeholder="Costo por comision de corte" [(ngModel)]="costPerWorkerPerHairCut" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput placeholder="Costo por corte" [(ngModel)]="costPerHairCut" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput placeholder="Horas a simular" [(ngModel)]="hoursToSimulate" (ngModelChange)="toInt($event)">
+					</mat-form-field>
+				</div>
+			</div>
+
+			<button mat-raised-button color="primary" (click)="initSimulation()"><span class="loading" *ngIf="loading"></span>{{loading ? '': 'Iniciar simulación'}}</button>
+
+			<div *ngIf="data">
+				<h4>Resultados</h4>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<strong>Horas simuladas: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Clientes atendidos: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Clientes perdidos: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Ingresos no percibidos (clientes perdidos): </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Ganancia bruta: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Costo por hora de trabajadores: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Costo de comision de cortes: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Costo total: </strong>
+						</div>
+						<div class="col-md-12">
+							<strong>Utilidad: </strong>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-12">{{hoursToSimulate}}</div>
+						<div class="col-md-12">{{totalClients}}</div>
+						<div class="col-md-12">{{goneClients}}</div>
+						<div class="col-md-12">{{(goneClients * costPerHairCut)|currency:'USD':true}}</div>
+						<div class="col-md-12 mat-success">{{gain|currency:'USD':true}}</div>
+						<div class="col-md-12 mat-error">-{{timeCost|currency:'USD':true}}</div>
+						<div class="col-md-12 mat-error">-{{comissionCost|currency:'USD':true}}</div>
+						<div class="col-md-12 mat-error">-{{totalCost|currency:'USD':true}}</div>
+						<div class="col-md-12 mat-success">{{utility|currency:'USD':true}}</div>
+					</div>
+				</div>
+				<div class="example-container mat-elevation-z8 table" style="margin-top:20px; height: 50vh; overflow-y: auto;">
+					<mat-table #table [dataSource]="data">
+
+						<ng-container matColumnDef="arriveHour">
+							<mat-header-cell *matHeaderCellDef>Hora de llegada</mat-header-cell>
+							<mat-cell *matCellDef="let client"> {{formated(client.arriveHour)}} </mat-cell>
+						</ng-container>
+
+						<ng-container matColumnDef="attendingHour">
+							<mat-header-cell *matHeaderCellDef>Hora de atención</mat-header-cell>
+							<mat-cell *matCellDef="let client"> {{formated(client.attendingHour)}} </mat-cell>
+						</ng-container>
+
+						<ng-container matColumnDef="serviceTime">
+							<mat-header-cell *matHeaderCellDef>Tiempo de servicio</mat-header-cell>
+							<mat-cell *matCellDef="let client"> {{client.serviceTime}} </mat-cell>
+						</ng-container>
+
+						<ng-container matColumnDef="leaveHour">
+							<mat-header-cell *matHeaderCellDef>Hora de salida</mat-header-cell>
+							<mat-cell *matCellDef="let client"> {{formated(client.leaveHour)}} </mat-cell>
+						</ng-container>
+
+						<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+						<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+					</mat-table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

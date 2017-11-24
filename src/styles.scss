@@ -1,0 +1,15 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+	font-family: 'Roboto';
+	src: url('assets/roboto.ttf');
+}
+@font-face {
+	font-family: 'Roboto Bold';
+	src: url('assets/roboto-bold.ttf');
+}
+body{
+	background: #eee;
+}
+.mat-success{
+	color: #4CAF50;
+}
